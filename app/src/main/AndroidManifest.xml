@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.demo.carservicetracker2"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CarServiceTracker"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon"
+        android:name="com.demo.carservicetracker2.utils.App">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+
+        <activity
+            android:exported="true"
+            android:name="com.demo.carservicetracker2.activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.demo.carservicetracker2.activities.DisclouserActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.ReportsActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.RestoreDriveList" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.AddFuelActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.demo.carservicetracker2.activities.FuelActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.ViewImageActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.SettingsActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.ServiceActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.AllSelectReminderActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.AllSelectDocumentActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.PapersActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.AllSelectServiceActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.AddDocumentActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.demo.carservicetracker2.activities.AddServiceActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.demo.carservicetracker2.activities.AddCarActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.demo.carservicetracker2.activities.GarageActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.demo.carservicetracker2.activities.MainActivity" android:exported="false" android:screenOrientation="portrait"/>
+         <activity android:theme="@style/Base.Theme.AppCompat" android:name="com.theartofdev.edmodo.cropper.CropImageActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <receiver android:name="com.demo.carservicetracker2.notification.AlarmReceiver" android:exported="false"/>
+        <receiver android:name="com.demo.carservicetracker2.notification.BootReceiver" android:enabled="true" android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.PACKAGE_RESTARTED"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.demo.carservicetracker2.notification.ExactAlarmScheduleReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+</manifest>

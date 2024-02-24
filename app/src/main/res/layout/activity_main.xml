@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:tag="layout/activity_main_0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/drawer_menu"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_alignParentStart="true"
+                        style="@style/matireal_toolbar_car">
+
+                        <ImageView
+                            android:src="@drawable/ic_menu"
+                            style="@style/toolbar_icon" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <RelativeLayout
+                        android:id="@+id/rlCarName"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/add_car_icon"
+                        android:layout_toRightOf="@+id/drawer_menu"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:theme="@style/toolbar_text"
+                            android:id="@+id/txtCarName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            android:padding="@dimen/_7sdp"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:src="@drawable/down_arrow"
+                            android:layout_toRightOf="@+id/txtCarName"
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/add_car_icon"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_alignParentEnd="true"
+                        style="@style/matireal_toolbar_car">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_car"
+                            style="@style/toolbar_icon" />
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/mainCardsLL"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginRight="@dimen/_5sdp"
+                        style="@style/mainThreeLL">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rlPaper"
+                            android:foreground="?attr/selectableItemBackground"
+                            style="@style/mainThreeCard">
+
+                            <RelativeLayout
+                                android:background="@drawable/paper_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true">
+
+                                    <androidx.cardview.widget.CardView style="@style/semiCard">
+
+                                        <ImageView
+                                            android:padding="@dimen/_10sdp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:src="@drawable/main_paper" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <TextView
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Papers"
+                                        style="@style/regularText" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        style="@style/mainThreeLL">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rlReport"
+                            android:foreground="?attr/selectableItemBackground"
+                            style="@style/mainThreeCard">
+
+                            <RelativeLayout
+                                android:background="@drawable/report_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true">
+
+                                    <androidx.cardview.widget.CardView style="@style/semiCard">
+
+                                        <ImageView
+                                            android:padding="@dimen/_10sdp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:src="@drawable/main_report" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <TextView
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/reports"
+                                        style="@style/regularText" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/llSelectService"
+                    android:padding="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainCardsLL">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_service"
+                        android:layout_weight="1"
+                        style="@style/bold_text" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/serviceSeeAll"
+                        android:foreground="?attr/selectableItemBackground"
+                        style="@style/see_all_card">
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:text="@string/see_all"
+                            style="@style/see_all_text" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/staticServiceRecycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_below="@+id/llSelectService" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/llRecommended"
+                    android:padding="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/staticServiceRecycle">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recommended"
+                        android:layout_weight="1"
+                        style="@style/bold_text" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/SelectedCarServiceAll"
+                        android:foreground="?attr/selectableItemBackground"
+                        style="@style/see_all_card">
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:text="@string/see_all"
+                            style="@style/see_all_text" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/llRecommended">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/serviceRecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                    <FrameLayout
+                        android:id="@+id/llNoData"
+                        style="@style/frame_LL">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="nodata.json"
+                            app:lottie_loop="true"
+                            app:lottie_speed="1" />
+
+                        <LinearLayout style="@style/no_data_text_ll">
+
+                            <TextView style="@style/no_data_text" />
+
+                            <TextView
+                                android:theme="@style/hintTheme"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Add here information about oil,filters,tires change and other services." />
+                        </LinearLayout>
+                    </FrameLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:background="@drawable/pro_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:theme="@style/ProDrawerMainText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:text="@string/go_premium_unlock_nnew_features"
+                            android:layout_centerVertical="true" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:cardBackgroundColor="@color/pro_icon_bg"
+                            app:cardCornerRadius="@dimen/_15sdp">
+
+                            <ImageView
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/pro" />
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/edit_text_card"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/llFuel"
+                            android:background="?attr/selectableItemBackground"
+                            style="@style/drawerItemLL">
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/fuel" />
+
+                            <TextView
+                                android:theme="@style/drawerText"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:text="Fuel"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_7sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/right_back" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llSetting"
+                            android:background="?attr/selectableItemBackground"
+                            style="@style/drawerItemLL">
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/setting_dw" />
+
+                            <TextView
+                                android:theme="@style/drawerText"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:text="Settings"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_7sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/right_back" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llBackupRestore"
+                            android:visibility="gone"
+                            android:background="?attr/selectableItemBackground"
+                            style="@style/drawerItemLL">
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/backup_dw" />
+
+                            <TextView
+                                android:theme="@style/drawerText"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:text="@string/backup_restore"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_7sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/right_back" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/edit_text_card"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/llShare"
+                            android:background="?attr/selectableItemBackground"
+                            style="@style/drawerItemLL">
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/share" />
+
+                            <TextView
+                                android:theme="@style/drawerText"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:text="Share With Friends"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_7sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/right_back" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llRateus"
+                            android:background="?attr/selectableItemBackground"
+                            style="@style/drawerItemLL">
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/rating" />
+
+                            <TextView
+                                android:theme="@style/drawerText"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:text="@string/rate_us"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_7sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/right_back" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPrivacy"
+                            android:background="?attr/selectableItemBackground"
+                            style="@style/drawerItemLL">
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/policy" />
+
+                            <TextView
+                                android:theme="@style/drawerText"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:text="@string/privacy_policy"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_7sdp"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/right_back" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>
+
+
+

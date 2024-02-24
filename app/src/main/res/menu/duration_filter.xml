@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/currentYear" android:title="CurrentYear"/>
+    <item android:id="@+id/lastYear" android:title="LastYear"/>
+    <item android:id="@+id/currentMonth" android:title="CurrentMonth"/>
+    <item android:id="@+id/lastMonth" android:title="LastMonth"/>
+    <item android:id="@+id/threeMonths" android:title="LastThreeMonths"/>
+    <item android:id="@+id/sixMonths" android:title="LastSixMonths"/>
+<!--    <item android:id="@+id/custom" android:title="Custom"/>-->
+</menu>

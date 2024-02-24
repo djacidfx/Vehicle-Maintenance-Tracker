@@ -1,0 +1,374 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="Theme.CarServiceTracker" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/addMobTextColor</item>
+        <item name="colorOnPrimary">@color/delete_icon_bg</item>
+        <item name="colorOnSecondary">@color/fontWhiteEnable</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/green</item>
+        <item name="colorSecondary">@color/jun</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="popupMenuBackground">@drawable/popup</item>
+    </style>
+
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--    </style>-->
+
+    <style name="toolbar_text">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+
+    <style name="toolbar_card">
+        <item name="android:layout_width">@dimen/_60sdp</item>
+        <item name="android:layout_height">@dimen/_26sdp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="cardBackgroundColor">@color/accept_continue</item>
+        <item name="cardCornerRadius">@dimen/_13sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="toolbar_save_text">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+    <style name="bold_text">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+
+    <style name="editTextCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="cardBackgroundColor">@color/edit_text_card</item>
+        <item name="cardCornerRadius">@dimen/_5sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="editText">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="fontFamily">@font/regular</item>
+        <item name="hintTextColor">@color/hint</item>
+    </style>
+
+    <style name="costHintTheme">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/service_hint</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+    <style name="hintTheme">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/hint</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+    <style name="Interval_title_text">
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+    <style name="part_semi_title_text">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/font3</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+    <style name="intervalTextCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">@dimen/_5sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="commentTextCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/edit_text_card</item>
+        <item name="cardCornerRadius">@dimen/_5sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="floatingDeleteButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/delete</item>
+        <item name="backgroundTint">@color/accept_continue</item>
+        <item name="elevation">0dp</item>
+        <item name="tint">@color/font1</item>
+    </style>
+    <style name="costEditTextCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="cardBackgroundColor">@color/service_bg</item>
+        <item name="cardCornerRadius">@dimen/_5sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="costHintThemeText">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/service_hint</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="cost_title_text">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/font4</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+    <style name="costEditText">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="hintTextColor">@color/service_hint</item>
+    </style>
+    <style name="disclouser_title">
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+
+    <style name="disclouser_text">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+    <style name="disclouser_btn_text">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="accept_text">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+    <style name="frame_LL">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_180sdp</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="no_data_text_ll">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">@dimen/_200sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+    <style name="no_data_text">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">No Data</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+
+    <style name="floatingButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@android:drawable/ic_input_add</item>
+        <item name="backgroundTint">@color/accept_continue</item>
+        <item name="elevation">0dp</item>
+        <item name="tint">@color/font1</item>
+    </style>
+
+    <style name="bold_small_text">
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+
+
+
+    <style name="cost_total">
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:textColor">@color/font4</item>
+        <item name="fontFamily">@font/amount</item>
+    </style>
+    <style name="dialogButton">
+        <item name="android:layout_width">@dimen/_100sdp</item>
+        <item name="android:layout_height">@dimen/_35sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="dialogTheme" parent="@style/Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:layout_marginLeft">@dimen/_10sdp</item>
+        <item name="android:layout_marginRight">@dimen/_10sdp</item>
+    </style>
+
+
+    <style name="drawerItemLL">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="mainThreeCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="cardCornerRadius">@dimen/_13sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="mainThreeLL">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_90sdp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="part_title_text">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+
+
+    <style name="proMainThreeLL">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_90sdp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="regularNText">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+    <style name="regularSmallText">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="see_all_card">
+        <item name="android:layout_width">@dimen/_50sdp</item>
+        <item name="android:layout_height">@dimen/_22sdp</item>
+        <item name="cardBackgroundColor">@color/see_all_bg</item>
+        <item name="cardCornerRadius">@dimen/_11sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="see_all_text">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+    <style name="semiCard">
+        <item name="android:layout_width">@dimen/_38sdp</item>
+        <item name="android:layout_height">@dimen/_38sdp</item>
+        <item name="cardCornerRadius">@dimen/_19sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="smallBold">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/font2</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+    <style name="smallComment">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/font2</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+    <style name="matireal_toolbar_car" parent="@style/Common_style">
+        <item name="cardBackgroundColor">@color/horizontal_service_bg</item>
+        <item name="cardCornerRadius">@dimen/_5sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="Common_style">
+        <item name="android:layout_width">@dimen/_30sdp</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="strokeColor">@color/icon_stroke</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+    </style>
+
+    <style name="toolbar_bg">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+    </style>
+
+    <style name="toolbar_icon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="regularText">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="fontFamily">@font/semibold</item>
+    </style>
+    <style name="ProDrawerMainText">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+    <style name="drawerText">
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/semibold</item>
+    </style>
+
+    <style name="smallHintTheme">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/font2</item>
+        <item name="fontFamily">@font/semibold</item>
+    </style>
+    <style name="SettingsCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_48sdp</item>
+        <item name="cardBackgroundColor">@color/edit_text_card</item>
+        <item name="cardCornerRadius">@dimen/_5sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="SettingsSemiCard">
+        <item name="android:layout_width">@dimen/_28sdp</item>
+        <item name="android:layout_height">@dimen/_28sdp</item>
+        <item name="cardCornerRadius">@dimen/_3sdp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="hintSemiBold">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/hint</item>
+        <item name="fontFamily">@font/semibold</item>
+    </style>
+    <style name="regularItemText">
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="fontFamily">@font/semibold</item>
+    </style>
+    <style name="statistic_bold">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="fontFamily">@font/semibold</item>
+    </style>
+    <style name="popup_window_animation_sms">
+        <item name="android:windowEnterAnimation">@anim/bounce</item>
+        <item name="android:windowExitAnimation">@anim/slide_up</item>
+    </style>
+</resources>

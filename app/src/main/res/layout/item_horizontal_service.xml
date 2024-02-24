@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:tag="layout/item_horizontal_service_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_5sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mainCard"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="@color/horizontal_service_bg"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/horizontal_service_stroke"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/service_img"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:theme="@style/disclouser_text"
+            android:gravity="center"
+            android:id="@+id/txtServiceName"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/total_cost"
+            android:singleLine="true"
+            android:layout_below="@+id/mainCard"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/semibold" />
+    </RelativeLayout>
+</layout>

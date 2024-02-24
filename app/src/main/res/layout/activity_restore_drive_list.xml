@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.demo.carservicetracker2.backupRestore.RestoreListModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:tag="layout/activity_restore_drive_list_0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_back_arrow"
+                    android:layout_centerVertical="true"
+                    style="@style/toolbar_icon" />
+
+                <RelativeLayout
+                    android:id="@+id/rlCarName"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/sort"
+                    android:layout_toRightOf="@+id/back"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:theme="@style/toolbar_text"
+                        android:id="@+id/txtCarName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/restore_file_list"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sort"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_alignParentEnd="true"
+                    style="@style/matireal_toolbar_car">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/imgSort"
+                        android:src="@drawable/ic_sort"
+                        style="@style/toolbar_icon" />
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:clipToPadding="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/linNoData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:id="@+id/llNoData"
+                    style="@style/frame_LL">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="nodata.json"
+                        app:lottie_loop="true"
+                        app:lottie_speed="1" />
+
+                    <LinearLayout style="@style/no_data_text_ll">
+
+                        <TextView style="@style/no_data_text" />
+
+                        <TextView
+                            android:theme="@style/hintTheme"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add here information about oil,filters,tires change and other services." />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

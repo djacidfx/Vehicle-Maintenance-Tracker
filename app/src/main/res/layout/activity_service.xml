@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:tag="layout/activity_service_0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/toolbar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <FrameLayout
+                android:id="@+id/llNoData"
+                android:visibility="gone"
+                style="@style/frame_LL">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="nodata.json"
+                    app:lottie_loop="true"
+                    app:lottie_speed="1" />
+
+                <LinearLayout style="@style/no_data_text_ll">
+
+                    <TextView style="@style/no_data_text" />
+
+                    <TextView
+                        android:theme="@style/hintTheme"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add here information about oil,filters,tires change and other services." />
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_service"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                style="@style/floatingButton" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -69,7 +69,7 @@ public class AppConstants {
     public static SimpleDateFormat MonthFormat = new SimpleDateFormat("MMM, yyyy");
     public static SimpleDateFormat YearFormat = new SimpleDateFormat("yyyy");
     public static final SimpleDateFormat SIMPLE_DATE_FORMAT_DATE_TIME = new SimpleDateFormat("dd, MMMM, yyyy,EEE - HH:mm:ss.SSS a");
-    public static String PRIVACY_POLICY_URL = "https://google.com";
+    public static String PRIVACY_POLICY_URL = "https://mywild.work/privacy";
 
     public static String GetMonthName(int month) {
         return month == 0 ? "Jan" : month == 1 ? "Feb" : month == 2 ? "Mar" : month == 3 ? "Apr" : month == 4 ? "May" : month == 5 ? "Jun" : month == 6 ? "Jul" : month == 7 ? "Aug" : month == 8 ? "Sep" : month == 9 ? "Oct" : month == 10 ? "Nov" : "Dec";

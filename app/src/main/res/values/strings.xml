@@ -42,7 +42,7 @@
     <string name="date">Date</string>
     <string name="delete">Delete</string>
     <string name="delete_items">Delete Items</string>
-    <string name="disclouser_description">This app is governed by Techno information`s Terms of Service. By continuing to use app you represent that you have read and accept the Terms of Service, Privacy Policy, and Permission Disclosure.</string>
+    <string name="disclouser_description">This app is governed by WildCat Studio`s Terms of Service. By continuing to use app you represent that you have read and accept the Terms of Service, Privacy Policy, and Permission Disclosure.</string>
     <string name="document_name">Document Name</string>
     <string name="export_successfully">Export Successfully</string>
     <string name="failed_to_export">Failed to export</string>
